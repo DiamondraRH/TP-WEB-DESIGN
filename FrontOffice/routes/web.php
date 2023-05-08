@@ -15,9 +15,9 @@ use App\Http\Middleware\GzipMiddleware;
 |
 */
 
-Route::middleware(['gzip'])->group(function () {
+// Route::middleware(['gzip'])->group(function () {
     // Your routes here
     Route::get('/', [ArticleController::class , 'toList']);
     Route::get('/articles' , [ArticleController::class , 'toList']);
     Route::get('/article/{slug}' , [ArticleController::class , 'detail']);
-});
+// });
