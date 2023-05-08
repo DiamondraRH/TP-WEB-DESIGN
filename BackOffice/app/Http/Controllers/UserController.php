@@ -15,7 +15,7 @@ class UserController extends Controller
         $result = User::take(1)->get();
         if ($result[0]->email == $email && $result[0]->password == $password) {
             $request->session()->put('user', $result[0]);
-            return redirect('articles'); ;
+            return redirect('/articles'); ;
         }
         else{
             return view('index');
