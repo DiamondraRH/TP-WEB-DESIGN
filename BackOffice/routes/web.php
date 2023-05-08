@@ -22,7 +22,7 @@ Route::middleware(['checkSession'])->group(function () {
     // Your routes here
     Route::get('/article' , [ArticleController::class , 'toAdd']);
     Route::post('/article' , [ArticleController::class , 'add']);
-    Route::get('/articles' , [ArticleController::class , 'toList']);
+    Route::get('/articles' , [ArticleController::class , 'toList'])->name('liste');
     Route::get('/article/{id}', [ArticleController::class , 'toUpdate'])->where('id', '[0-9]+');;
     Route::post('/article/update', [ArticleController::class , 'update']);
     Route::get('/article/delete/{id}', [ArticleController::class , 'delete']);
