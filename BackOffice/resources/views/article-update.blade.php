@@ -30,7 +30,7 @@
                     <div class="form-group">
                         <label for="titre">Titre</label>
                         <input class="form-control form-control-name" name="titre"
-                                type="text" id="titre" value={{$article->titre}} required>
+                                type="text" id="titre" value="{{$article->titre}}" required>
                     </div>
 
                     <div class="form-group">

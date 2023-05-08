@@ -9,7 +9,7 @@ CREATE TABLE users (
 
 CREATE TABLE article (
       id_article                SMALLSERIAL PRIMARY KEY ,
-      titre                     VARCHAR(100) NOT NULL ,
+      titre                     VARCHAR NOT NULL ,
       resume                    TEXT NOT NULL ,
       contenu                   TEXT NOT NULL ,
       img                       TEXT ,

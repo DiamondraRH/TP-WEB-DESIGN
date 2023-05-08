@@ -16,7 +16,7 @@ use App\Http\Middleware\GzipMiddleware;
 |
 */
 
-Route::view('/', 'index');
+Route::view('', 'index');
 Route::post('/login', [UserController::class , 'login']);
 Route::middleware(['checkSession'])->group(function () {
     // Your routes here
@@ -26,5 +26,4 @@ Route::middleware(['checkSession'])->group(function () {
     Route::get('/article/{id}', [ArticleController::class , 'toUpdate'])->where('id', '[0-9]+');;
     Route::post('/article/update', [ArticleController::class , 'update']);
     Route::get('/article/delete/{id}', [ArticleController::class , 'delete']);
-    Route::get('/article/{slug}' , [ArticleController::class , 'detail']);
 });
